@@ -1,2 +1,2 @@
-# ginfinity_cross_platform
+# ginfinity
 Garten Infinity Cross platform application
