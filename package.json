@@ -9,7 +9,11 @@
     "android": "cross-env REACT_EDITOR=code expo start --android",
     "ios": "cross-env REACT_EDITOR=code expo start --ios",
     "eject": "expo eject",
-    "test": "node ./node_modules/jest/bin/jest.js --watchAll"
+    "test": "node_modules/.bin/jest",
+    "testDebug": "jest -o --watch --coverage=false",
+    "testFinal": "jest",
+    "test:debug": "node --inspect-brk node_modules/jest/bin/jest.js --runInBand",
+    "updateSnapshots": "jest -u --coverage=false"
   },
   "jest": {
     "preset": "jest-expo"
@@ -51,7 +55,9 @@
     "cross-env": "~7.0.0",
     "eslint-config-rallycoding": "^3.2.0",
     "expo-cli": "~3.11.7",
-    "jest-expo": "^37.0.0"
+    "jest": "^26.6.3",
+    "jest-expo": "^37.0.0",
+    "react-test-renderer": "^17.0.2"
   },
   "bugs": {
     "url": "https://github.com/creativetimofficial/material-kit-react-native/issues"
