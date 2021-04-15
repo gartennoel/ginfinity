@@ -20,6 +20,8 @@ module.exports = {
     + '|@react-navigation'
     + '|react-native-reanimated'
     + '|react-native-screens'
+    + '|expo-splash-screen'
+    + '|@react-navigation'
     + ')/)',
   ],
 };
