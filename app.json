@@ -4,7 +4,6 @@
     "description": "",
     "slug": "ginfinity_cross_platform",
     "privacy": "unlisted",
-    "sdkVersion": "37.0.0",
     "platforms": [
       "ios",
       "android"
