@@ -1,10 +1,10 @@
-import React from "react";
-import { TouchableWithoutFeedback, ScrollView, StyleSheet, Image } from "react-native";
-import { Block, Text, theme } from "galio-framework";
-import { useSafeArea } from "react-native-safe-area-context";
+import React from 'react';
+import { TouchableWithoutFeedback, ScrollView, StyleSheet, Image } from 'react-native';
+import { Block, Text, theme } from 'galio-framework';
+import { useSafeArea } from 'react-native-safe-area-context';
 
 import { Icon, Drawer as DrawerCustomItem } from '../components/';
-import { Images, materialTheme } from "../constants/";
+import { Images, materialTheme } from '../constants/';
 
 
 function CustomDrawerContent({
@@ -17,27 +17,27 @@ function CustomDrawerContent({
 }) {
   const insets = useSafeArea();
   const screens = [
-    "Home",
-    "Woman",
-    "Man",
-    "Chapter",
-    "New Collection",
-    "Profile",
-    "Settings",
-    "Components"
+    'Home',
+    'Woman',
+    'Man',
+    'Chapter',
+    'New Collection',
+    'Profile',
+    'Settings',
+    'Components'
   ];
   return (
     <Block
       style={styles.container}
-      forceInset={{ top: "always", horizontal: "never" }}
+      forceInset={{ top: 'always', horizontal: 'never' }}
     >
       <Block flex={0.25} style={styles.header}>
         <TouchableWithoutFeedback
-          onPress={() => navigation.navigate("Profile")}
+          onPress={() => navigation.navigate('Profile')}
         >
           <Block style={styles.profile}>
             <Image source={{ uri: profile.avatar }} style={styles.avatar} />
-            <Text h5 color={"white"}>
+            <Text h5 color={'white'}>
               {profile.name}
             </Text>
           </Block>
@@ -52,7 +52,7 @@ function CustomDrawerContent({
             {profile.type}
           </Text>
           <Text size={16} color={materialTheme.COLORS.WARNING}>
-            {profile.rating}{" "}
+            {profile.rating}{' '}
             <Icon name="shape-star" family="GalioExtra" size={14} />
           </Text>
         </Block>
@@ -62,8 +62,8 @@ function CustomDrawerContent({
           contentContainerStyle={[
             {
               paddingTop: insets.top * 0.4,
-              paddingLeft: drawerPosition === "left" ? insets.left : 0,
-              paddingRight: drawerPosition === "right" ? insets.right : 0
+              paddingLeft: drawerPosition === 'left' ? insets.left : 0,
+              paddingRight: drawerPosition === 'right' ? insets.right : 0
             }
           ]}
           showsVerticalScrollIndicator={false}
@@ -74,7 +74,7 @@ function CustomDrawerContent({
                 title={item}
                 key={index}
                 navigation={navigation}
-                focused={state.index === index ? true : false}
+                focused={state.index === index}
               />
             );
           })}
@@ -84,12 +84,12 @@ function CustomDrawerContent({
         <DrawerCustomItem
           title="Sign In"
           navigation={navigation}
-          focused={state.index === 8 ? true : false}
+          focused={state.index === 8}
         />
         <DrawerCustomItem
           title="Sign Up"
           navigation={navigation}
-          focused={state.index === 9 ? true : false}
+          focused={state.index === 9}
         />
       </Block>
     </Block>
