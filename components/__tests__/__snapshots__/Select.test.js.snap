@@ -19,9 +19,23 @@ exports[`Select renders correctly 1`] = `
       "paddingLeft": 16,
     }
   }
+  isFullWidth={false}
   keyboardShouldPersistTaps="never"
+  multipleSelect={false}
   onSelect={[Function]}
-  options={null}
+  renderButtonComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "render": [Function],
+    }
+  }
+  renderRightComponent={[Function]}
+  renderRowComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "render": [Function],
+    }
+  }
   scrollEnabled={true}
   showsVerticalScrollIndicator={true}
   style={

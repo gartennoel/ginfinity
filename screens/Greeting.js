@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, StatusBar, Image, StyleSheet, Text, View } from 'react-native';
+import { Platform, StatusBar, Image } from 'react-native';
 import { AppLoading } from 'expo';
 import { Asset } from 'expo-asset';
 import { Block, GalioProvider } from 'galio-framework';
@@ -46,22 +46,14 @@ export default class Greeting extends React.Component {
         />
       );
     }
-      if (Platform.OS === 'web') {
-        return (
-          <View style={styles.container}>
-            <Text>Open up App.js to start working on your app!</Text>
-            <StatusBar style="auto" />
-          </View>
-        );
-      }
-        return (
-          <GalioProvider theme={materialTheme}>
-            <Block flex>
-              {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-              <Screens />
-            </Block>
-          </GalioProvider>
-        );
+    return (
+      <GalioProvider theme={materialTheme}>
+        <Block flex>
+          {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+          <Screens />
+        </Block>
+      </GalioProvider>
+    );
   }
 
   _loadResourcesAsync = async () => {
@@ -80,12 +72,3 @@ export default class Greeting extends React.Component {
     this.setState({ isLoadingComplete: true });
   };
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
